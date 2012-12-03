@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Friend Finder</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="navbar row">
+        <div class="navbar-inner span12">
+          <a class="brand" href="/">Friend Finder</a>
+          <ul class="nav">
+            <li id="nav-cc"><a href="#collegecity">College Friends In My City</a></li>
+            <li id="nav-cs"><a href="#collegestate">College Friends In My State</a></li>
+            <li id="nav-college"><a href="#college">College Friends</a></li>
+            <li id="nav-city"><a href="#mycity">Friends In My City</a></li>
+            <li id="nav-state"><a href="#mystate">Friends In My State</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="loading">
+        <strong>Loading</strong>
+        <br/><br/>
+        <small>The first load does take a while...</small>
+      </div>
+
+      <section id="error" class="row" style="display:none;">
+        <div class="alert alert-error alert-block offset2 span8">
+          <h4>Error!</h4>
+          <p></p>
+        </div>
+      </section>
+
+      <section id="welcome" class="row" style="display:none;">
+        <div class="hero-unit well span8 offset2">
+          <h1>Welcome to Friend Finder!</h1>
+          <p>To get started, you need to login with Facebook.</p>
+          <p><a class="btn btn-primary btn-large" href="#login">Login with Facebook</a></p>
+        </div>
+      </section>
+
+      <section id="friends" class="row" style="display:none;">
+      </section>
+
+    </div>
+
+    <div id="fb-root"></div>
+    <script>
+      // Additional JS functions here
+      window.fbAsyncInit = ff.fbinit;
+
+      // Load the SDK Asynchronously
+      (function(d){
+         var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement('script'); js.id = id; js.async = true;
+         js.src = "//connect.facebook.net/en_US/all.js";
+         ref.parentNode.insertBefore(js, ref);
+       }(document));
+    </script>
+
+  </body>
+</html>
+
